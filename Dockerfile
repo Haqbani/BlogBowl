@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-# check=error=true;skip=SecretsUsedInArgOrEnv
+# check=error=true
 
 # Railway-compatible Dockerfile without BuildKit secrets
 # Note: TIPTAP_PRO_TOKEN is passed as ARG per Railway requirements
