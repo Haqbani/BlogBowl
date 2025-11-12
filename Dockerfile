@@ -54,8 +54,17 @@ COPY . .
 
 # Create .npmrc from environment variable for TipTap Pro authentication
 # Railway will pass TIPTAP_PRO_TOKEN as a build argument from service variables
-RUN echo "@tiptap-pro:registry=https://registry.tiptap.dev/" > .npmrc && \
-    echo "//registry.tiptap.dev/:_authToken=${TIPTAP_PRO_TOKEN}" >> .npmrc
+# Use proper quoting and validation to ensure token is correctly interpolated
+RUN { \
+      echo "@tiptap-pro:registry=https://registry.tiptap.dev/"; \
+      if [ -n "$TIPTAP_PRO_TOKEN" ]; then \
+        echo "//registry.tiptap.dev/:_authToken=$TIPTAP_PRO_TOKEN"; \
+      else \
+        echo "WARNING: TIPTAP_PRO_TOKEN not set - TipTap Pro packages will fail to install"; \
+        exit 1; \
+      fi; \
+    } > .npmrc && \
+    cat .npmrc
 
 # Precompile bootsnap code for faster boot times
 RUN bundle exec bootsnap precompile app/ lib/
