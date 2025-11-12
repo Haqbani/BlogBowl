@@ -1,0 +1,13 @@
+one:
+  title: مساحة العمل الأولى
+two:
+  title: مساحة العمل الثانية
+
+workspace_blog_with_domain_1:
+  title: مساحة عمل المدونة 1
+
+workspace_with_subscribers:
+  title: مساحة عمل المشتركين
+
+default_user_workspace:
+  title: مساحة المستخدم الافتراضية

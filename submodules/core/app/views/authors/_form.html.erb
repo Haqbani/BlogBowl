@@ -1,0 +1,112 @@
+<div class="mx-auto max-w-3xl py-10">
+  <%= turbo_frame_tag "new_link", data: { controller: 'author_links' } %>
+  <%= turbo_frame_tag "edit_link", data: { controller: 'author_links' } %>
+  <%= form_with(model: author, url: author_path(author), method: :patch) do |form| %>
+    <%= link_to authors_path do %>
+      <div class="flex gap-x-2 items-center text-sm opacity-70 cursor-pointer hover:opacity-50 active:opacity-40">
+        <i class="iconoir-arrow-left"></i>
+        <p><%= t('buttons.back_to_authors') %></p>
+      </div>
+    <% end %>
+    <div class="flex justify-between mb-5 mt-2">
+      <div>
+        <h1 class="font-bold"><%= t('authors.title') %></h1>
+      </div>
+      <%= form.submit t('buttons.save_settings'), class: 'btn btn-primary' %>
+    </div>
+
+    <%= render partial: 'shared/flashes' %>
+
+    <div class="mt-10 flex flex-col gap-y-10">
+
+      <div class="card card-border border-base-300 bg-white p-6">
+        <div class="">
+          <div class="flex items-center gap-x-2">
+            <i class="iconoir-user-square text-primary text-xl"></i>
+            <h3 class="font-bold"><%= t('form.primary_information') %></h3>
+          </div>
+          <p class="opacity-70 mt-2"><%= t('authors.author_bio') %></p>
+        </div>
+
+        <div class="flex flex-col gap-y-4 mt-5">
+          <div>
+            <%= form.label :first_name, class: "block text-sm font-medium mb-1" %>
+            <%= form.text_field :first_name, placeholder: t('settings.page_name_placeholder') %>
+          </div>
+
+          <div>
+            <%= form.label :last_name, class: "block text-sm font-medium mb-1" %>
+            <%= form.text_field :last_name, placeholder: t('settings.page_name_placeholder') %>
+          </div>
+
+
+          <div>
+            <%= form.label :position, class: "block text-sm font-medium mb-1" %>
+            <%= form.text_field :position, placeholder: t('members.member_role') %>
+          </div>
+
+          <div>
+            <%= form.label :long_description, t('settings.description'), class: "block text-sm font-medium mb-1" %>
+            <%= form.text_area :long_description, placeholder: t('authors.author_bio') + "..." %>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card-border border-base-300 bg-white p-6">
+        <div class="">
+          <div class="flex items-center gap-x-2">
+            <i class="iconoir-media-image text-primary text-xl"></i>
+            <h3 class="font-bold"><%= t('form.images_section') %></h3>
+          </div>
+          <p class="opacity-70 mt-2"><%= t('settings.images_hint') %></p>
+        </div>
+
+        <div class="flex flex-col gap-y-4 mt-5">
+
+          <%= render "shared/file_input",
+                     form: form,
+                     image: author.avatar_picture,
+                     field: :avatar_picture,
+                     field_label: t('authors.author_avatar'),
+                     # size: 'h-10',
+                     recommendation: t('settings.og_image_recommendation')
+          %>
+
+          <%= render "shared/file_input",
+                     form: form,
+                     image: author.og_image,
+                     field: :og_image,
+                     field_label: t('settings.og_image'),
+                     size: 'w-64 h-32',
+                     recommendation: t('settings.og_image_recommendation')
+          %>
+
+        </div>
+      </div>
+
+      <div class="card card-border border-base-300 bg-white p-6">
+        <div class="">
+          <div class="flex items-center gap-x-2">
+            <i class="iconoir-link text-primary text-xl"></i>
+            <h3 class="font-bold"><%= t('settings.social_links') %></h3>
+          </div>
+          <p class="opacity-70 mt-2"><%= t('settings.social_links') %></p>
+        </div>
+
+        <div class="flex flex-col gap-y-4 mt-5">
+          <div>
+            <div class="rounded w-full bg-primary-content/40 border-2 border-gray-200">
+              <div id="social_media_list" class="flex flex-col justify-between w-full" data-controller="author_links">
+                <%= render partial: "authors/links/link", collection: author.author_links, as: :link %>
+              </div>
+            </div>
+            <%= link_to new_author_author_link_path(@author), data: { turbo_frame: "new_link" }, class: "btn btn-outline btn-neutral btn-sm mt-4" do %>
+              <%= t('buttons.add_new_link') %> <i class="iconoir-plus text-xl"></i>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  <% end %>
+</div>

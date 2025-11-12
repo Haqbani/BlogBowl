@@ -1,0 +1,28 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: المقال الأول
+  content_html: <p>هذا هو محتوى المقال الأول باللغة العربية. يحتوي على معلومات مفيدة ومثيرة للاهتمام.</p>
+  page: one
+  slug: my-string-1
+  description: وصف المقال الأول
+  seo_title: المقال الأول - مدونتي
+  seo_description: مقال تعريفي باللغة العربية
+
+two:
+  title: المقال الثاني
+  content_html: <p>هذا هو محتوى المقال الثاني. يتناول موضوعاً مختلفاً ومهماً.</p>
+  page: one
+  slug: my-string-2
+  description: وصف المقال الثاني
+  seo_title: المقال الثاني - مدونتي
+  seo_description: مقال ثانٍ يحتوي على معلومات قيمة
+
+post_with_authors:
+  title: مقال مع مؤلفين
+  content_html: <p>هذا المقال كتبه عدة مؤلفين بشكل تعاوني.</p>
+  page: one
+  slug: post-with-authors
+  description: مقال تعاوني
+  seo_title: مقال مع مؤلفين متعددين
+  seo_description: مقال كتبه فريق من الكتاب

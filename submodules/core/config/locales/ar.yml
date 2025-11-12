@@ -1,0 +1,801 @@
+# frozen_string_literal: true
+# Arabic (العربية) locale for BlogBowl
+# encoding: UTF-8
+
+ar:
+  # Common application strings
+  common:
+    app_name: "بلوق بول"
+    blog: "المدونة"
+    post: "المقالة"
+    page: "الصفحة"
+    workspace: "مساحة العمل"
+    settings: "الإعدادات"
+    dashboard: "لوحة التحكم"
+    home: "الرئيسية"
+    about: "حول"
+    contact: "اتصل بنا"
+    search: "بحث"
+    search_placeholder: "ابحث..."
+    loading: "جاري التحميل..."
+    processing: "جاري المعالجة..."
+    welcome: "مرحباً"
+    or: "أو"
+    go_back: "العودة"
+    save: "حفظ"
+    ago: "منذ"
+
+  # Authentication translations
+  auth:
+    sign_in: "تسجيل الدخول"
+    sign_out: "تسجيل الخروج"
+    sign_up: "إنشاء حساب"
+    welcome_back: "مرحباً بعودتك 👋"
+    email: "البريد الإلكتروني"
+    password: "كلمة المرور"
+    password_confirmation: "تأكيد كلمة المرور"
+    remember_me: "تذكرني"
+    forgot_password: "نسيت كلمة المرور؟"
+    reset_password: "إعادة تعيين كلمة المرور"
+    current_password: "كلمة المرور الحالية"
+    new_password: "كلمة المرور الجديدة"
+    confirm_password: "تأكيد كلمة المرور"
+    change_default_password: "تغيير كلمة المرور الافتراضية"
+    default_password_warning: "ما زلت تستخدم كلمة المرور الافتراضية. لأمان حسابك، يرجى"
+    update_password_now: "تحديث كلمة المرور الآن"
+
+  # Workspace translations
+  workspaces:
+    title: "مساحات العمل"
+    my_workspaces: "مساحات العمل الخاصة بي"
+    create_workspace: "إنشاء مساحة عمل"
+    edit_workspace: "تعديل مساحة العمل"
+    delete_workspace: "حذف مساحة العمل"
+    workspace_name: "اسم مساحة العمل"
+    workspace_description: "وصف مساحة العمل"
+    workspace_settings: "إعدادات مساحة العمل"
+    switch_workspace: "تبديل مساحة العمل"
+    no_workspaces: "لا توجد مساحات عمل"
+    members: "الأعضاء"
+    invite_member: "دعوة عضو"
+
+  # Pages translations
+  pages:
+    title: "الصفحات"
+    all_pages: "جميع الصفحات"
+    workspace_pages: "صفحات مساحة العمل"
+    new_page: "صفحة جديدة"
+    create_new_page: "إنشاء صفحة جديدة"
+    start_writing: "ابدأ في كتابة صفحتك التالية"
+    edit_page: "تعديل الصفحة"
+    delete_page: "حذف الصفحة"
+    page_title: "عنوان الصفحة"
+    page_slug: "الرابط المختصر"
+    page_content: "محتوى الصفحة"
+    published: "منشور"
+    draft: "مسودة"
+    publish: "نشر"
+    unpublish: "إلغاء النشر"
+    publish_date: "تاريخ النشر"
+    page_type: "نوع الصفحة"
+    blog_page: "صفحة مدونة"
+    changelog_page: "سجل التغييرات"
+    help_center_page: "مركز المساعدة"
+    no_pages_yet: "لا توجد صفحات بعد"
+    create_first_page: "أنشئ أول صفحة لك"
+    page_settings: "إعدادات الصفحة"
+    page_design: "تصميم الصفحة"
+    page_header: "رأس الصفحة"
+    page_footer: "تذييل الصفحة"
+    page_navigation: "تنقل الصفحة"
+    page_layout: "تخطيط الصفحة"
+    page_visibility: "رؤية الصفحة"
+    page_seo: "محركات البحث (SEO)"
+    page_meta: "البيانات الوصفية"
+    page_og_image: "صورة المشاركة الاجتماعية"
+    page_featured_posts: "المقالات المميزة"
+    page_recent_posts: "المقالات الأخيرة"
+    page_categories: "التصنيفات"
+    page_tags: "الوسوم"
+    show_page: "عرض الصفحة"
+    hide_page: "إخفاء الصفحة"
+    page_status: "حالة الصفحة"
+    page_author: "مؤلف الصفحة"
+    page_created: "تاريخ الإنشاء"
+    page_updated: "تاريخ التحديث"
+
+  # Posts translations
+  posts:
+    title: "المقالات"
+    all_posts: "جميع المقالات"
+    published_posts: "المقالات المنشورة"
+    draft_posts: "المقالات المسودة"
+    archived_posts: "المقالات المؤرشفة"
+    view_all_posts: "عرض جميع المقالات"
+    new_post: "مقالة جديدة"
+    edit_post: "تعديل المقالة"
+    delete_post: "حذف المقالة"
+    post_title: "عنوان المقالة"
+    post_slug: "الرابط المختصر"
+    post_excerpt: "مقتطف"
+    post_content: "محتوى المقالة"
+    featured_image: "الصورة البارزة"
+    publish_now: "نشر الآن"
+    schedule_publish: "جدولة النشر"
+    save_draft: "حفظ كمسودة"
+    view_post: "عرض المقالة"
+    recent_posts: "المقالات الأخيرة"
+    popular_posts: "المقالات الشائعة"
+    related_posts: "مقالات ذات صلة"
+    no_matches: "لا توجد مقالات تطابق الفلاتر"
+    start_creating: "ابدأ في إنشاء المقالات"
+    by: "بواسطة"
+    move_to_archive: "نقل إلى الأرشيف"
+
+  # Categories translations
+  categories:
+    title: "الفئات"
+    all_categories: "جميع الفئات"
+    all_tags: "جميع الوسوم"
+    new_category: "فئة جديدة"
+    edit_category: "تعديل الفئة"
+    delete_category: "حذف الفئة"
+    category_name: "اسم الفئة"
+    category_slug: "الرابط المختصر"
+    category_description: "وصف الفئة"
+    no_category: "بدون فئة"
+    select_category: "اختر الفئة"
+    tag: "الوسم"
+    slug: "الرابط المختصر"
+    posts_count: "عدد المقالات"
+    no_categories_yet: "لا توجد فئات بعد. يرجى إضافة فئة جديدة"
+
+  # Authors translations
+  authors:
+    title: "المؤلفون"
+    all_authors: "جميع المؤلفين"
+    author_name: "اسم المؤلف"
+    author_bio: "السيرة الذاتية"
+    author_email: "البريد الإلكتروني"
+    author_avatar: "الصورة الشخصية"
+    author_role: "الدور"
+    posts_by_author: "مقالات بواسطة %{author}"
+    create_new_author: "إنشاء مؤلف جديد"
+    no_authors: "لا يوجد مؤلفون 🥲"
+    back_to_authors: "العودة إلى المؤلفين"
+
+  # Members translations
+  members:
+    title: "الأعضاء"
+    all_members: "جميع الأعضاء"
+    add_member: "إضافة عضو"
+    remove_member: "إزالة العضو"
+    member_name: "اسم العضو"
+    member_email: "البريد الإلكتروني"
+    member_role: "الدور"
+    admin: "مدير"
+    editor: "محرر"
+    viewer: "مشاهد"
+    pending_invitation: "دعوة معلقة"
+    invitation_sent: "تم إرسال الدعوة"
+    manage_members: "إدارة الأعضاء"
+    see_members: "عرض الأعضاء"
+    new_member: "عضو جديد"
+    invite_member: "دعوة عضو"
+    you: "أنت"
+
+  # Newsletter translations
+  newsletters:
+    title: "النشرة الإخبارية"
+    all_newsletters: "جميع النشرات الإخبارية"
+    workspace_newsletters: "نشرات مساحة العمل"
+    subscribe: "اشترك"
+    unsubscribe: "إلغاء الاشتراك"
+    subscriber_email: "البريد الإلكتروني"
+    subscribers: "المشتركون"
+    total_subscribers: "إجمالي المشتركين"
+    new_subscriber: "مشترك جديد"
+    send_newsletter: "إرسال النشرة"
+    newsletter_subject: "موضوع النشرة"
+    newsletter_content: "محتوى النشرة"
+    subscription_confirmed: "تم تأكيد اشتراكك"
+    already_subscribed: "أنت مشترك بالفعل"
+    feature_disabled: "ميزة النشرة الإخبارية معطلة"
+    enable_postmark_message: "لتفعيل النشرات الإخبارية، يجب تكوين خدمة Postmark في البيئة مع رمز API صالح."
+    create_new: "إنشاء نشرة إخبارية جديدة"
+    create_new_group: "إنشاء مجموعة نشرة إخبارية جديدة"
+    newsletter_name: "اسم النشرة"
+    newsletter_description: "وصف النشرة"
+    newsletter_settings: "إعدادات النشرة"
+    newsletter_template: "قالب النشرة"
+    newsletter_frequency: "تكرار النشرة"
+    newsletter_schedule: "جدول النشرة"
+    newsletter_preview: "معاينة النشرة"
+    newsletter_draft: "مسودة النشرة"
+    newsletter_sent: "تم إرسال النشرة"
+    newsletter_failed: "فشل إرسال النشرة"
+    newsletter_pending: "النشرة قيد الانتظار"
+    newsletter_analytics: "تحليلات النشرة"
+    open_rate: "معدل الفتح"
+    click_rate: "معدل النقر"
+    unsubscribe_rate: "معدل إلغاء الاشتراك"
+    bounce_rate: "معدل الارتداد"
+    newsletter_campaigns: "حملات النشرة"
+    create_campaign: "إنشاء حملة"
+    edit_campaign: "تعديل الحملة"
+    delete_campaign: "حذف الحملة"
+    send_test_email: "إرسال بريد اختبار"
+    subscriber_list: "قائمة المشتركين"
+    add_subscriber: "إضافة مشترك"
+    remove_subscriber: "إزالة مشترك"
+    import_subscribers: "استيراد مشتركين"
+    export_subscribers: "تصدير مشتركين"
+    subscriber_tags: "وسوم المشتركين"
+    subscriber_segments: "شرائح المشتركين"
+    dns:
+      verify_domain: "تحقق من نطاقك:"
+      verified: "تم التحقق"
+      inactive: "غير نشط"
+      hostname: "اسم المضيف"
+      type: "النوع"
+      add_value: "أضف هذه القيمة"
+      dkim: "DKIM"
+      return_path: "Return-Path"
+      be_patient: "كن صبوراً:"
+      dns_propagation_notice: "قد يستغرق انتشار DNS بعض الوقت (عادةً أقل من ساعتين)."
+    general_settings_title: "الإعدادات العامة للنشرة الإخبارية"
+    general_info: "معلومات عامة حول نشرتك الإخبارية"
+    newsletter_name_hint: "لك فقط! هذا الاسم لن يظهر على الموقع الفعلي."
+    newsletter_name_placeholder: "نشرتي الإخبارية الرائعة"
+    personalization_title: "تخصيص النشرة الإخبارية"
+    personalization_description: "تخصيص رسائل البريد الإلكتروني للنشرة الإخبارية"
+    logo: "الشعار"
+    logo_recommendation: "الحجم الموصى به: 140×45 بكسل. سنقوم بتغيير حجمه ليناسب البريد الإلكتروني."
+    email_footer: "تذييل البريد الإلكتروني"
+    email_footer_hint: "العنوان، حقوق النشر، إلخ.. يمكن أن يحتوي على عدة أسطر."
+    email_footer_placeholder: "حقوق النشر\nعنوانك، المدينة، الرمز البريدي\nأنت مشترك في النشرة الإخبارية لـ BlogBowl"
+    domain_settings_title: "نطاق النشرة الإخبارية"
+    domain_settings_description: "النطاق الذي سنرسل منه نشرتك الإخبارية."
+    domain_label: "النطاق"
+    domain_placeholder: "example.com"
+    sender_info_title: "معلومات المرسل"
+    sender_info_description: "اسم المرسل والبريد الإلكتروني ومعلومات الرد."
+    sender_name_label: "اسم المرسل"
+    sender_name_placeholder: "نشرة بلوق بول الإخبارية"
+    sender_email_label: "البريد الإلكتروني للمرسل"
+    reply_to_label: "الرد إلى"
+    reply_to_placeholder: "reply@example.com"
+    create_title: "إنشاء نشرة إخبارية جديدة"
+    primary_information_title: "المعلومات الأساسية"
+    primary_information_description: "معلومات عامة حول نشرتك الإخبارية."
+    name_hint: "لك فقط! هذا الاسم لن يظهر في النشرة الإخبارية الفعلية!"
+    name_placeholder: "نشرتي الإخبارية الرائعة"
+
+  # Settings translations
+  settings:
+    title: "الإعدادات"
+    general: "عام"
+    appearance: "المظهر"
+    domain: "النطاق"
+    email: "البريد الإلكتروني"
+    integrations: "التكاملات"
+    billing: "الفواتير"
+    profile: "الملف الشخصي"
+    account: "الحساب"
+    security: "الأمان"
+    notifications: "الإشعارات"
+    language: "اللغة"
+    timezone: "المنطقة الزمنية"
+    theme: "السمة"
+    custom_domain: "نطاق مخصص"
+    subdomain: "النطاق الفرعي"
+    logo: "الشعار"
+    favicon: "الأيقونة المفضلة"
+    footer_text: "نص التذييل"
+    back_to_settings: "العودة إلى الإعدادات"
+    general_page_settings: "إعدادات الصفحة العامة"
+    save_settings: "حفظ الإعدادات"
+    page_name_slug: "اسم ورابط الصفحة"
+    page_general_info: "معلومات عامة عن صفحتك"
+    page_name: "اسم الصفحة"
+    page_name_hint: "للاستخدام الخاص فقط! هذا الاسم لن يظهر على الموقع الفعلي."
+    page_name_placeholder: "مدونتي الرائعة"
+    slug: "الرابط المختصر"
+    slug_placeholder: "blog"
+    blog_title_description: "عنوان ووصف المدونة"
+    blog_title_description_hint: "عنوان ووصف الصفحة الرئيسية للمدونة"
+    title: "العنوان"
+    title_placeholder: "إطلاق إمكانيات مدونتك"
+    description: "الوصف"
+    description_placeholder: "مدونة متخصصة في صناعة أفضل منتجات SaaS."
+    seo_title_description: "عنوان ووصف SEO"
+    seo_hint: "عنوان ووصف SEO للصفحة الرئيسية للمدونة. افتراضيًا نأخذ عنوان ووصف المدونة، لكن يمكنك تغييره"
+    seo_title: "عنوان SEO"
+    seo_title_hint: "إذا ترك فارغًا، يتم أخذ عنوان المدونة"
+    seo_description: "وصف SEO"
+    seo_description_hint: "إذا ترك فارغًا، يتم أخذ وصف المدونة"
+    images: "الصور"
+    images_hint: "هنا يمكنك رفع صور OG (المشاركة الاجتماعية) والأيقونة المفضلة"
+    og_image: "صورة OG الافتراضية"
+    og_image_recommendation: "الحجم الموصى به: 1200x630 بكسل"
+    favicon_recommendation: "الامتداد الموصى به: .ico"
+    header_settings: "إعدادات الرأس"
+    footer_settings: "إعدادات التذييل"
+    navigation_settings: "إعدادات التنقل"
+    design_settings: "إعدادات التصميم"
+    custom_code: "كود مخصص"
+    custom_css: "CSS مخصص"
+    custom_js: "JavaScript مخصص"
+    analytics: "التحليلات"
+    tracking_code: "كود التتبع"
+    google_analytics: "Google Analytics"
+    social_links: "روابط وسائل التواصل الاجتماعي"
+    facebook_url: "رابط Facebook"
+    twitter_url: "رابط Twitter"
+    instagram_url: "رابط Instagram"
+    linkedin_url: "رابط LinkedIn"
+    youtube_url: "رابط YouTube"
+    github_url: "رابط GitHub"
+    contact_settings: "إعدادات الاتصال"
+    contact_email: "بريد التواصل الإلكتروني"
+    contact_phone: "هاتف التواصل"
+    contact_address: "عنوان التواصل"
+    privacy_policy: "سياسة الخصوصية"
+    terms_of_service: "شروط الخدمة"
+    copyright_text: "نص حقوق النشر"
+    workspace_name: "اسم مساحة العمل"
+    workspace_description: "وصف مساحة العمل"
+    workspace_logo: "شعار مساحة العمل"
+    workspace_timezone: "المنطقة الزمنية لمساحة العمل"
+    workspace_language: "لغة مساحة العمل"
+    api_settings: "إعدادات API"
+    api_keys: "مفاتيح API"
+    webhooks: "Webhooks"
+    export_data: "تصدير البيانات"
+    import_data: "استيراد البيانات"
+    delete_workspace: "حذف مساحة العمل"
+    danger_zone: "منطقة الخطر"
+
+  # Validation messages
+  validations:
+    required: "مطلوب"
+    invalid: "غير صحيح"
+    too_short: "قصير جداً"
+    too_long: "طويل جداً"
+    taken: "مأخوذ بالفعل"
+    invalid_email: "البريد الإلكتروني غير صحيح"
+    invalid_url: "الرابط غير صحيح"
+    password_mismatch: "كلمات المرور غير متطابقة"
+    password_too_short: "كلمة المرور قصيرة جداً (الحد الأدنى %{count} أحرف)"
+    confirmation_mismatch: "التأكيد غير متطابق"
+
+  # Flash messages
+  flash:
+    success: "تم بنجاح"
+    error: "حدث خطأ"
+    notice: "ملاحظة"
+    alert: "تنبيه"
+    created: "تم الإنشاء بنجاح"
+    updated: "تم التحديث بنجاح"
+    deleted: "تم الحذف بنجاح"
+    saved: "تم الحفظ بنجاح"
+    published: "تم النشر بنجاح"
+    unpublished: "تم إلغاء النشر بنجاح"
+    signed_in: "تم تسجيل الدخول بنجاح"
+    signed_out: "تم تسجيل الخروج بنجاح"
+    not_authorized: "غير مصرح لك بهذا الإجراء"
+    not_found: "غير موجود"
+    invalid_credentials: "البريد الإلكتروني أو كلمة المرور غير صحيحة"
+
+  # Button translations
+  buttons:
+    save: "حفظ"
+    cancel: "إلغاء"
+    delete: "حذف"
+    edit: "تعديل"
+    create: "إنشاء"
+    update: "تحديث"
+    submit: "إرسال"
+    confirm: "تأكيد"
+    back: "رجوع"
+    next: "التالي"
+    previous: "السابق"
+    close: "إغلاق"
+    add: "إضافة"
+    remove: "إزالة"
+    upload: "رفع"
+    download: "تنزيل"
+    preview: "معاينة"
+    publish: "نشر"
+    unpublish: "إلغاء النشر"
+    send: "إرسال"
+    reset: "إعادة تعيين"
+    clear: "مسح"
+    apply: "تطبيق"
+    back_to_pages: "العودة إلى الصفحات"
+    back_to_authors: "العودة إلى المؤلفين"
+    back_to_categories: "العودة إلى التصنيفات"
+    back_to_settings: "العودة إلى الإعدادات"
+    back_to_newsletters: "العودة إلى النشرات"
+    save_settings: "حفظ الإعدادات"
+    save_changes: "حفظ التغييرات"
+    create_page: "إنشاء صفحة"
+    create_newsletter: "إنشاء نشرة"
+    create_new_member: "إنشاء عضو جديد"
+    delete_category: "حذف التصنيف"
+    configure_settings: "تكوين الإعدادات"
+    edit_header: "تعديل الرأس"
+    edit_footer: "تعديل التذييل"
+    customize_design: "تخصيص التصميم"
+    edit_cta: "تعديل الدعوة إلى العمل"
+    edit_newsletter_settings: "تعديل إعدادات النشرة"
+    setup_domain: "إعداد النطاق"
+    inject_custom_code: "إدراج كود مخصص"
+    save_link: "حفظ الرابط"
+    update_link: "تحديث الرابط"
+    add_new_link: "إضافة رابط جديد"
+    deactivate: "إلغاء التفعيل"
+    customize_newsletter: "تخصيص النشرة"
+    configure_newsletter: "تكوين النشرة"
+    sign_in: "تسجيل الدخول"
+    log_out: "تسجيل الخروج"
+    accept: "قبول"
+    go_back: "العودة"
+    home: "الرئيسية"
+    go_to_home_page: "الذهاب إلى الصفحة الرئيسية"
+    verify: "تحقق"
+
+  # Navigation translations
+  navigation:
+    dashboard: "لوحة التحكم"
+    posts: "المقالات"
+    pages: "الصفحات"
+    categories: "الفئات"
+    authors: "المؤلفون"
+    members: "الأعضاء"
+    newsletters: "النشرات"
+    settings: "الإعدادات"
+    help: "المساعدة"
+    documentation: "الوثائق"
+    support: "الدعم"
+    logout: "تسجيل الخروج"
+    back_to_workspace: "العودة إلى مساحة العمل"
+    view_site: "عرض الموقع"
+    page_management: "إدارة الصفحات"
+    page_settings: "إعدادات الصفحة"
+
+  # Navbar translations
+  navbar:
+    sign_out: "تسجيل الخروج"
+    workspace_management: "إدارة مساحة العمل"
+    pages: "الصفحات"
+    authors: "المؤلفون"
+    newsletter: "النشرة الإخبارية"
+    settings: "الإعدادات"
+    workspace_settings: "إعدادات مساحة العمل"
+    back_to_workspace: "العودة إلى مساحة العمل"
+    newsletter_management: "إدارة النشرة الإخبارية"
+    newsletter_emails: "رسائل النشرة الإخبارية"
+    subscribers: "المشتركون"
+    new_email: "بريد إلكتروني جديد"
+
+  # Form labels
+  form:
+    primary_information: "المعلومات الأساسية"
+    general_section: "عام"
+    images_section: "الصور"
+
+  # Time format translations
+  time:
+    formats:
+      default: "%d/%m/%Y %H:%M"
+      short: "%d %b %H:%M"
+      long: "%d %B %Y %H:%M:%S"
+      date_only: "%d/%m/%Y"
+      time_only: "%H:%M"
+    am: "ص"
+    pm: "م"
+
+  # Date format translations
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%d %b"
+      long: "%d %B %Y"
+      month_year: "%B %Y"
+    day_names:
+      - الأحد
+      - الاثنين
+      - الثلاثاء
+      - الأربعاء
+      - الخميس
+      - الجمعة
+      - السبت
+    abbr_day_names:
+      - الأحد
+      - الاثنين
+      - الثلاثاء
+      - الأربعاء
+      - الخميس
+      - الجمعة
+      - السبت
+    month_names:
+      - ~
+      - يناير
+      - فبراير
+      - مارس
+      - أبريل
+      - مايو
+      - يونيو
+      - يوليو
+      - أغسطس
+      - سبتمبر
+      - أكتوبر
+      - نوفمبر
+      - ديسمبر
+    abbr_month_names:
+      - ~
+      - يناير
+      - فبراير
+      - مارس
+      - أبريل
+      - مايو
+      - يونيو
+      - يوليو
+      - أغسطس
+      - سبتمبر
+      - أكتوبر
+      - نوفمبر
+      - ديسمبر
+    order:
+      - :day
+      - :month
+      - :year
+
+  # DateTime distance_in_words translations
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: "منذ حوالي ساعة واحدة"
+        other: "منذ حوالي %{count} ساعات"
+      x_days:
+        one: "منذ يوم واحد"
+        other: "منذ %{count} أيام"
+      about_x_months:
+        one: "منذ حوالي شهر واحد"
+        other: "منذ حوالي %{count} أشهر"
+      about_x_years:
+        one: "منذ حوالي سنة واحدة"
+        other: "منذ حوالي %{count} سنوات"
+      less_than_x_minutes:
+        one: "منذ أقل من دقيقة واحدة"
+        other: "منذ أقل من %{count} دقائق"
+      x_minutes:
+        one: "منذ دقيقة واحدة"
+        other: "منذ %{count} دقائق"
+      less_than_x_seconds:
+        one: "منذ أقل من ثانية واحدة"
+        other: "منذ أقل من %{count} ثوانٍ"
+
+  # ActiveRecord translations
+  activerecord:
+    models:
+      user: "المستخدم"
+      post: "المقالة"
+      page: "الصفحة"
+      workspace: "مساحة العمل"
+      category: "الفئة"
+      author: "المؤلف"
+      member: "العضو"
+      newsletter: "النشرة الإخبارية"
+    attributes:
+      user:
+        email: "البريد الإلكتروني"
+        password: "كلمة المرور"
+        password_confirmation: "تأكيد كلمة المرور"
+        name: "الاسم"
+        created_at: "تاريخ الإنشاء"
+        updated_at: "تاريخ التحديث"
+      post:
+        title: "العنوان"
+        slug: "الرابط المختصر"
+        content: "المحتوى"
+        excerpt: "المقتطف"
+        published_at: "تاريخ النشر"
+        category: "الفئة"
+        author: "المؤلف"
+      page:
+        title: "العنوان"
+        slug: "الرابط المختصر"
+        content: "المحتوى"
+        page_type: "نوع الصفحة"
+      workspace:
+        name: "الاسم"
+        subdomain: "النطاق الفرعي"
+        custom_domain: "النطاق المخصص"
+      category:
+        name: "الاسم"
+        slug: "الرابط المختصر"
+        description: "الوصف"
+    errors:
+      messages:
+        blank: "لا يمكن أن يكون فارغاً"
+        invalid: "غير صحيح"
+        taken: "مأخوذ بالفعل"
+        too_short: "قصير جداً (الحد الأدنى %{count} أحرف)"
+        too_long: "طويل جداً (الحد الأقصى %{count} حرف)"
+        confirmation: "غير متطابق"
+
+  # Pagination translations
+  pagination:
+    previous: "السابق"
+    next: "التالي"
+    first: "الأول"
+    last: "الأخير"
+    truncate: "..."
+
+  # Number formats
+  number:
+    format:
+      separator: "."
+      delimiter: ","
+      precision: 2
+    currency:
+      format:
+        format: "%u%n"
+        unit: "ر.س"
+        separator: "."
+        delimiter: ","
+        precision: 2
+
+  # Roles translations
+  roles:
+    owner: "مالك"
+    admin: "مدير"
+    editor: "محرر"
+    author: "مؤلف"
+    contributor: "مساهم"
+    viewer: "مشاهد"
+
+  # Confirmation dialogs
+  confirmations:
+    are_you_sure: "هل أنت متأكد؟"
+    delete_confirmation: "هل أنت متأكد من الحذف؟"
+    unsaved_changes: "لديك تغييرات غير محفوظة. هل أنت متأكد من المغادرة؟"
+
+  # Empty states
+  empty_states:
+    no_posts: "لا توجد مقالات"
+    no_pages: "لا توجد صفحات"
+    no_categories: "لا توجد فئات"
+    no_results: "لا توجد نتائج"
+    no_subscribers: "لا يوجد مشتركون"
+    create_first: "أنشئ أول %{resource}"
+    no_newsletters: "لا توجد نشرات إخبارية"
+    no_members: "لا يوجد أعضاء"
+    no_workspaces: "لا توجد مساحات عمل"
+    no_data: "لا توجد بيانات"
+    empty_list: "القائمة فارغة"
+
+  # Status messages
+  status:
+    active: "نشط"
+    inactive: "غير نشط"
+    enabled: "مفعّل"
+    disabled: "معطّل"
+    online: "متصل"
+    offline: "غير متصل"
+    pending: "قيد الانتظار"
+    approved: "موافق عليه"
+    rejected: "مرفوض"
+    completed: "مكتمل"
+    in_progress: "قيد التقدم"
+    scheduled: "مجدول"
+    cancelled: "ملغي"
+    failed: "فشل"
+    success: "نجح"
+    processing: "قيد المعالجة"
+    queued: "في قائمة الانتظار"
+
+  # Error messages
+  errors:
+    something_went_wrong: "حدث خطأ ما"
+    page_not_found: "الصفحة غير موجودة"
+    access_denied: "تم رفض الوصول"
+    unauthorized: "غير مصرح"
+    forbidden: "محظور"
+    internal_server_error: "خطأ في الخادم الداخلي"
+    service_unavailable: "الخدمة غير متاحة"
+    bad_request: "طلب غير صحيح"
+    validation_failed: "فشل التحقق"
+    network_error: "خطأ في الشبكة"
+    timeout_error: "انتهت مهلة الطلب"
+    file_too_large: "الملف كبير جداً"
+    invalid_file_type: "نوع الملف غير صحيح"
+    upload_failed: "فشل الرفع"
+    connection_error: "خطأ في الاتصال"
+    try_again: "يرجى المحاولة مرة أخرى"
+    contact_support: "يرجى الاتصال بالدعم"
+    404:
+      title: "للأسف، هذه الصفحة غير موجودة 😭"
+      not_found: "404 غير موجود"
+
+  # Success messages
+  success:
+    operation_completed: "تمت العملية بنجاح"
+    saved_successfully: "تم الحفظ بنجاح"
+    created_successfully: "تم الإنشاء بنجاح"
+    updated_successfully: "تم التحديث بنجاح"
+    deleted_successfully: "تم الحذف بنجاح"
+    sent_successfully: "تم الإرسال بنجاح"
+    uploaded_successfully: "تم الرفع بنجاح"
+    published_successfully: "تم النشر بنجاح"
+    unpublished_successfully: "تم إلغاء النشر بنجاح"
+    imported_successfully: "تم الاستيراد بنجاح"
+    exported_successfully: "تم التصدير بنجاح"
+    changes_saved: "تم حفظ التغييرات"
+    settings_updated: "تم تحديث الإعدادات"
+
+  # Common phrases
+  common_phrases:
+    read_more: "اقرأ المزيد"
+    show_more: "عرض المزيد"
+    show_less: "عرض أقل"
+    view_all: "عرض الكل"
+    view_details: "عرض التفاصيل"
+    get_started: "ابدأ الآن"
+    learn_more: "معرفة المزيد"
+    coming_soon: "قريباً"
+    new: "جديد"
+    featured: "مميز"
+    recommended: "موصى به"
+    popular: "شائع"
+    trending: "رائج"
+    latest: "الأحدث"
+    oldest: "الأقدم"
+    last_updated: "آخر تحديث"
+    newest_first: "الأحدث أولاً"
+    oldest_first: "الأقدم أولاً"
+    title_asc: "العنوان (أ - ي)"
+    title_desc: "العنوان (ي - أ)"
+    all: "الكل"
+    none: "لا شيء"
+    any: "أي"
+    select_all: "تحديد الكل"
+    deselect_all: "إلغاء تحديد الكل"
+    filter: "تصفية"
+    sort: "ترتيب"
+    sort_by: "ترتيب حسب"
+    search_results: "نتائج البحث"
+    no_search_results: "لا توجد نتائج بحث"
+    clear_filters: "مسح الفلاتر"
+    apply_filters: "تطبيق الفلاتر"
+    reset_filters: "إعادة تعيين الفلاتر"
+    actions: "الإجراءات"
+    options: "الخيارات"
+    more_options: "المزيد من الخيارات"
+    loading_more: "جاري تحميل المزيد..."
+    no_more_items: "لا توجد عناصر أخرى"
+    refresh: "تحديث"
+    reload: "إعادة تحميل"
+    retry: "إعادة المحاولة"
+    copy: "نسخ"
+    paste: "لصق"
+    cut: "قص"
+    duplicate: "تكرار"
+    move: "نقل"
+    rename: "إعادة التسمية"
+    share: "مشاركة"
+    export: "تصدير"
+    import: "استيراد"
+    print: "طباعة"
+    help: "مساعدة"
+    about: "حول"
+    version: "الإصدار"
+    powered_by: "مدعوم بواسطة"
+    made_with_love: "صُنع بحب"
+
+  # Read time translations
+  read_time:
+    minutes: "دقائق"
+    minute: "دقيقة"

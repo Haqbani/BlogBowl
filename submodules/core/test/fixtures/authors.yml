@@ -1,0 +1,53 @@
+one:
+  member: one
+  first_name: خالد
+  last_name: المحرر
+  email: noblog1@example.com
+  active: true
+  slug: 'khalid-editor'
+  position: محرر ومدون
+  short_description: محرر مهتم بالتكنولوجيا
+  long_description: محرر ومدون عربي مهتم بالتكنولوجيا والثقافة
+
+without_name:
+  member: two
+  email: noblog2@example.com
+  active: true
+  slug: '844ca0b1-7fd3-4dff-a6c4-35b6d9af17b9'
+  position: كاتب
+  short_description: كاتب متنوع المواضيع
+
+from_blog_two:
+  member: five
+  first_name: سارة
+  last_name: الكاتبة
+  email: noblog3@example.com
+  active: true
+  slug: 'sarah-writer'
+  position: كاتبة ومؤلفة
+  short_description: كاتبة مبدعة
+
+email_author_workspace_owner:
+  member: member_workspace_owner
+  first_name: بطرس
+  last_name: بان
+  email: peter@pan.com
+  slug: 'peter-pan'
+  position: مؤلف رئيسي
+  short_description: مؤلف ومدون محترف
+
+#TODO: PRO
+#email_author_pro_workspace_owner:
+#  member: pro_workspace_owner
+#  first_name: بطرس
+#  last_name: بان
+#  email: peter@pan.com
+#  slug: 'peter-pan'
+#
+#email_author_free_workspace_owner:
+#  member: free_workspace_owner
+#  first_name: بطرس
+#  last_name: بان
+#  email: peter@pan.com
+#  slug: 'peter-pan'
+#

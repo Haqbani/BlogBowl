@@ -1,0 +1,34 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  page: one
+  seo_title: مدونتي - مشاركة الأفكار والتجارب
+  seo_description: مدونة شخصية لمشاركة المقالات باللغة العربية
+  title: مدونتي
+  description: مرحباً بك في مدونتي
+  template: basic
+  logo_text: مدونتي
+  copyright: © 2025 جميع الحقوق محفوظة
+
+two:
+  page: two
+  seo_title: مدونتي الثانية
+  seo_description: مدونة شخصية أخرى
+  title: مدونتي الثانية
+  template: basic
+
+blog_with_domain_1_settings:
+  page: blog_with_domain_1
+  seo_title: مدونة غونزاليس
+  seo_description: مدونة تقنية باللغة العربية
+  title: مدونة غونزاليس
+  template: basic
+  newsletter: newsletter_blog_with_domain_1
+
+page_settings_with_subscribers:
+  page: blog_with_subscribers
+  seo_title: مدونة المشتركين
+  seo_description: مدونة مع نظام الاشتراك
+  title: مدونة المشتركين
+  template: basic
+  newsletter: newsletter_with_subscribers

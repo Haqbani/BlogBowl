@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="<%= I18n.locale %>" dir="<%= I18n.locale == :ar ? 'rtl' : 'ltr' %>">
+  <%= render "layouts/common_head" %>
+
+  <body class="<%= yield(:body_class) %>">
+    <%= render "shared/masquerade_banner" %>
+    <%= render "shared/navbar" %>
+    <main class="ltr:ml-[316px] ltr:mr-4 rtl:mr-[316px] rtl:ml-4 <%= 'pt-12' if session[:admin_id] %>">
+      <%= turbo_frame_tag :flash %>
+      <%= yield %>
+    </main>
+  </body>
+</html>

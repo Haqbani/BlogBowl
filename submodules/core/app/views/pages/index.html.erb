@@ -1,0 +1,40 @@
+<% content_for :title, t('pages.all_pages') %>
+<div class="pt-10">
+  <div class="">
+    <!-- Header Section -->
+    <div class="flex justify-between items-center mb-8">
+      <h1><%= t('pages.workspace_pages') %></h1>
+    </div>
+
+    <div class="mb-10">
+      <%= render partial: 'shared/flashes' %>
+    </div>
+
+    <% if current_user.using_default_password? %>
+      <div class="mb-10">
+        <%= render 'shared/notices/disabled_feature_notice',
+                   title: t('auth.change_default_password'),
+                   message: t('auth.default_password_warning') + " " +
+                     link_to(t('auth.update_password_now'), edit_member_path(@workspace.members.first), class: "font-bold text-blue-600 hover:underline") + "."
+        %>
+      </div>
+    <% end %>
+
+    <!-- Posts List -->
+    <div class="grid grid-cols-3 gap-4">
+      <!-- Post Item -->
+      <%= render partial: "pages/page", collection: @pages %>
+
+      <%= link_to new_page_path, class: "relative rounded-xl border-2 border-dashed border-gray-300 p-6 hover:border-blue-400 transition-colors min-h-32" do %>
+        <div class="absolute inset-0 flex flex-col items-center justify-center">
+          <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-100 transition-colors mb-2">
+            <i class="iconoir-plus text-3xl text-blue-500"></i>
+          </div>
+          <span class="text-sm font-medium text-gray-900"><%= t('pages.create_new_page') %></span>
+          <span class="text-sm text-gray-500"><%= t('pages.start_writing') %></span>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="min-h-screen">
+  <section class="pt-5 md:pt-10 px-4 sm:px-6 lg:px-8">
+    <div class="hero-header">
+      <h1 class="text-center w-full"><%= t('errors.404.not_found') %></h1>
+      <p class="text-xl opacity-80 text-center mt-5"><%= t('errors.404.title') %></p>
+      <div class="flex items-center gap-x-5 justify-center mt-10">
+        <button class="btn btn-outline" onclick="window.history.back()"><%= t('buttons.go_back') %></button>
+        <a class="btn btn-neutral" href="<%= get_full_url(dynamic_prefix('')) %>"><%= t('buttons.home') %></a>
+      </div>
+    </div>
+  </section>
+</div>

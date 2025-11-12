@@ -1,0 +1,16 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: التصنيف الأول
+  description: وصف التصنيف الأول
+  parent_id: null
+  slug: category-1
+  color: '#3B82F6'
+  page: one
+
+two:
+  name: التصنيف الثاني
+  description: وصف التصنيف الثاني
+  slug: category-2
+  color: '#8B5CF6'
+  page: one

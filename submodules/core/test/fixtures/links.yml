@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: الرئيسية
+  url: https://www.google.com/home
+  link_type: 'link'
+  location: 'header'
+  page: one
+  order: 1
+
+two:
+  title: عام
+  url: https://www.google.com/general
+  link_type: 'link'
+  location: 'header'
+  page: two
+  order: 2

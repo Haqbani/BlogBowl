@@ -1,0 +1,126 @@
+<% content_for :title, t('settings.general') %>
+<div class="mx-auto max-w-3xl py-10">
+  <%= form_with(model: @page_settings, url: pages_settings_general_path, method: :patch) do |form| %>
+    <%= link_to pages_settings_path do %>
+      <div class="flex gap-x-2 items-center text-sm opacity-70 cursor-pointer hover:opacity-50 active:opacity-40">
+        <i class="iconoir-arrow-left"></i>
+        <p><%= t('settings.back_to_settings') %></p>
+      </div>
+    <% end %>
+    <div class="flex justify-between mb-5 mt-2">
+      <div>
+        <h1 class="font-bold"><%= t('settings.general_page_settings') %></h1>
+      </div>
+      <%= form.submit t('settings.save_settings'), class: 'btn btn-primary' %>
+    </div>
+
+    <%= render partial: 'shared/flashes' %>
+
+    <div class="mt-10 flex flex-col gap-y-10">
+
+      <div class="card card-border border-base-300 bg-white p-6">
+        <div class="">
+          <div class="flex items-center gap-x-2">
+            <i class="iconoir-globe text-primary text-xl"></i>
+            <h3 class="font-bold"><%= t('settings.page_name_slug') %></h3>
+          </div>
+          <p class="opacity-70 mt-2"><%= t('settings.page_general_info') %></p>
+        </div>
+
+        <div class="flex flex-col gap-y-4 mt-5">
+          <%= form.fields_for :page do |page_form| %>
+            <div>
+              <div class="flex justify-between">
+                <%= form.label :name, t('settings.page_name'), class: "block text-sm font-medium mb-1" %>
+                <p class="text-xs text-gray-400"><%= t('settings.page_name_hint') %></p>
+              </div>
+              <%= page_form.text_field :name, placeholder: t('settings.page_name_placeholder'), class: "w-full text-sm" %>
+            </div>
+            <div>
+              <%= page_form.label :slug, t('settings.slug'), class: "block text-sm font-medium mb-1" %>
+              <%= page_form.text_field :slug, placeholder: t('settings.slug_placeholder'), class: "w-full text-sm mr-5" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="card card-border border-base-300 bg-white p-6">
+        <div class="">
+          <div class="flex items-center gap-x-2">
+            <i class="iconoir-globe text-primary text-xl"></i>
+            <h3 class="font-bold"><%= t('settings.blog_title_description') %></h3>
+          </div>
+          <p class="opacity-70 mt-2"><%= t('settings.blog_title_description_hint') %></p>
+        </div>
+
+        <div class="flex flex-col gap-y-4 mt-5">
+          <div>
+            <%= form.label :title, t('settings.title'), class: "block text-sm font-medium mb-1" %>
+            <%= form.text_field :title, placeholder: t('settings.title_placeholder'), class: "w-full text-sm mr-5" %>
+          </div>
+
+          <div>
+            <%= form.label :description, t('settings.description'), class: "block text-sm font-medium mb-1" %>
+            <%= form.text_area :description, placeholder: t('settings.description_placeholder'), class: 'w-full h-20 bg-white', disabled: @disable_controls %>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card-border border-base-300 bg-white p-6">
+        <div class="">
+          <div class="flex items-center gap-x-2">
+            <i class="iconoir-globe text-primary text-xl"></i>
+            <h3 class="font-bold"><%= t('settings.seo_title_description') %></h3>
+          </div>
+          <p class="opacity-70 mt-2"><%= t('settings.seo_hint') %></p>
+        </div>
+
+        <div class="flex flex-col gap-y-4 mt-5">
+          <div>
+            <div class="flex justify-between">
+              <%= form.label :seo_title, t('settings.seo_title'), class: "block text-sm font-medium mb-1" %>
+              <p class="text-xs text-gray-400"><%= t('settings.seo_title_hint') %></p>
+            </div>
+            <%= form.text_field :seo_title, placeholder: t('settings.title_placeholder'), class: "w-full text-sm mr-5", disabled: @disable_controls %>
+          </div>
+          <div>
+            <div class="flex justify-between">
+              <%= form.label :seo_description, t('settings.seo_description'), class: "block text-sm font-medium mb-1" %>
+              <p class="text-xs text-gray-400"><%= t('settings.seo_description_hint') %></p>
+            </div>
+            <%= form.text_area :seo_description, placeholder: t('settings.description_placeholder'), class: 'w-full h-20 bg-white', disabled: @disable_controls %>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card-border border-base-300 bg-white p-6">
+        <div class="">
+          <div class="flex items-center gap-x-2">
+            <i class="iconoir-globe text-primary text-xl"></i>
+            <h3 class="font-bold"><%= t('settings.images') %></h3>
+          </div>
+          <p class="opacity-70 mt-2"><%= t('settings.images_hint') %></p>
+        </div>
+
+        <div class="flex flex-col gap-y-4 mt-5">
+          <%= render "shared/file_input",
+                     form: form,
+                     image: @page_settings.og_image,
+                     field: :og_image,
+                     field_label: t('settings.og_image'),
+                     size: 'w-64 h-36',
+                     recommendation: t('settings.og_image_recommendation')
+          %>
+          <%= render "shared/file_input",
+                     form: form,
+                     image: @page_settings.favicon,
+                     field: :favicon,
+                     field_label: t('settings.favicon'),
+                     recommendation: t('settings.favicon_recommendation')
+          %>
+        </div>
+      </div>
+    </div>
+
+  <% end %>
+</div>

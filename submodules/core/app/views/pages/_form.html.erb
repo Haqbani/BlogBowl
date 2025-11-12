@@ -1,0 +1,48 @@
+<div class="mx-auto max-w-3xl py-10">
+  <%= form_with(model: page, url: pages_path, method: :post) do |form| %>
+    <%= link_to pages_path do %>
+      <div class="flex gap-x-2 items-center text-sm opacity-70 cursor-pointer hover:opacity-50 active:opacity-40">
+        <i class="iconoir-arrow-left"></i>
+        <p><%= t('buttons.back_to_pages') %></p>
+      </div>
+    <% end %>
+    <div class="flex justify-between mb-5 mt-2">
+      <div>
+        <h1 class="font-bold"><%= t('pages.create_new_page') %></h1>
+      </div>
+      <%= form.submit t('buttons.create_page'), class: 'btn btn-primary' %>
+    </div>
+
+    <%= render partial: 'shared/flashes' %>
+
+    <div class="mt-10 flex flex-col gap-y-10">
+
+      <div class="card card-border border-base-300 bg-white p-6">
+        <div class="">
+          <div class="flex items-center gap-x-2">
+            <i class="iconoir-mail text-primary text-xl"></i>
+            <h3 class="font-bold"><%= t('form.primary_information') %></h3>
+          </div>
+          <p class="opacity-70 mt-2"><%= t('settings.page_general_info') %></p>
+        </div>
+
+        <div class="flex flex-col gap-y-4 mt-5">
+          <div>
+            <div class="flex justify-between">
+              <%= form.label :name, t('settings.page_name'), class: "block text-sm font-medium mb-1" %>
+              <p class="text-xs text-gray-400"><%= t('settings.page_name_hint') %></p>
+            </div>
+            <%= form.text_field :name, placeholder: t('settings.page_name_placeholder'), class: "w-full text-sm" %>
+          </div>
+          <div>
+            <div class="flex justify-between mt-4">
+              <%= form.label :slug, t('settings.slug'), class: "block text-sm font-medium mb-1" %>
+              <p class="text-xs text-gray-400"><%= t('settings.slug_placeholder') %></p>
+            </div>
+            <%= form.text_field :slug, class: "", placeholder: t('settings.slug_placeholder') %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
