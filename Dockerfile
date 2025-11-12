@@ -1,8 +1,8 @@
 # syntax=docker/dockerfile:1
-# check=error=true
 
 # Railway-compatible Dockerfile without BuildKit secrets
 # Note: TIPTAP_PRO_TOKEN is passed as ARG per Railway requirements
+# BuildKit linting disabled because Railway requires using ARG for secrets (no BuildKit secret mount support)
 
 # Global build arguments - must be declared before first FROM
 ARG TIPTAP_PRO_TOKEN
