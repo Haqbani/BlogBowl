@@ -46,6 +46,11 @@ RUN curl -fsSL https://bun.sh/install | bash -s -- "bun-v${BUN_VERSION}"
 # Copy application code
 COPY . .
 
+# Create .npmrc from environment variable for TipTap Pro authentication
+ARG TIPTAP_PRO_TOKEN=RkFbeGPCsTrRwVQEZpPqg6NzwQDwkEJwCfg1oZnOfvxiARNnceczoCBF77ciAX3C
+RUN echo "@tiptap-pro:registry=https://registry.tiptap.dev/" > .npmrc && \
+    echo "//registry.tiptap.dev/:_authToken=${TIPTAP_PRO_TOKEN}" >> .npmrc
+
 # Precompile bootsnap code for faster boot times
 RUN bundle exec bootsnap precompile app/ lib/
 
