@@ -4,8 +4,10 @@
 # Railway-compatible Dockerfile without BuildKit secrets
 # Note: TIPTAP_PRO_TOKEN is passed as ARG per Railway requirements
 
-# Make sure RUBY_VERSION matches the Ruby version in .ruby-version
+# Global build arguments - must be declared before first FROM
+ARG TIPTAP_PRO_TOKEN
 ARG RUBY_VERSION=3.2.2
+
 FROM docker.io/library/ruby:$RUBY_VERSION-slim AS base
 
 # Rails app lives here
@@ -24,6 +26,9 @@ ENV RAILS_ENV="production" \
 
 # Throw-away build stage to reduce size of final image
 FROM base AS build
+
+# Re-declare ARG to make it available in this build stage
+ARG TIPTAP_PRO_TOKEN
 
 # Install packages needed to build gems
 RUN apt-get update -qq && \
@@ -49,7 +54,6 @@ COPY . .
 
 # Create .npmrc from environment variable for TipTap Pro authentication
 # Railway will pass TIPTAP_PRO_TOKEN as a build argument from service variables
-ARG TIPTAP_PRO_TOKEN
 RUN echo "@tiptap-pro:registry=https://registry.tiptap.dev/" > .npmrc && \
     echo "//registry.tiptap.dev/:_authToken=${TIPTAP_PRO_TOKEN}" >> .npmrc
 
