@@ -1,7 +1,8 @@
 # syntax=docker/dockerfile:1
-# check=error=true
+# check=error=true;skip=SecretsUsedInArgOrEnv
 
 # Railway-compatible Dockerfile without BuildKit secrets
+# Note: TIPTAP_PRO_TOKEN is passed as ARG per Railway requirements
 
 # Make sure RUBY_VERSION matches the Ruby version in .ruby-version
 ARG RUBY_VERSION=3.2.2
@@ -47,7 +48,8 @@ RUN curl -fsSL https://bun.sh/install | bash -s -- "bun-v${BUN_VERSION}"
 COPY . .
 
 # Create .npmrc from environment variable for TipTap Pro authentication
-ARG TIPTAP_PRO_TOKEN=RkFbeGPCsTrRwVQEZpPqg6NzwQDwkEJwCfg1oZnOfvxiARNnceczoCBF77ciAX3C
+# Railway will pass TIPTAP_PRO_TOKEN as a build argument from service variables
+ARG TIPTAP_PRO_TOKEN
 RUN echo "@tiptap-pro:registry=https://registry.tiptap.dev/" > .npmrc && \
     echo "//registry.tiptap.dev/:_authToken=${TIPTAP_PRO_TOKEN}" >> .npmrc
 
