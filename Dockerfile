@@ -29,10 +29,16 @@ RUN apt-get update -qq && \
     apt-get install --no-install-recommends -y build-essential git libpq-dev libyaml-dev pkg-config unzip && \
     rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
+# Copy git configuration and initialize submodules
+COPY .git ./.git
+COPY .gitmodules ./
+RUN git submodule update --init --recursive
+
 # Install application gems
 COPY Gemfile Gemfile.lock ./
-COPY submodules/core/ ./submodules/core/
-RUN bundle install && \
+# Temporarily disable frozen mode for bundle install
+RUN bundle config set --local frozen false && \
+    bundle install && \
     rm -rf ~/.bundle/ "${BUNDLE_PATH}"/ruby/*/cache "${BUNDLE_PATH}"/ruby/*/bundler/gems/*/.git && \
     bundle exec bootsnap precompile --gemfile
 
