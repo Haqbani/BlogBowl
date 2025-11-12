@@ -70,7 +70,7 @@ Rails.application.configure do
 
   # Set host to be used by links generated in mailer templates.
   fronted_url = ENV.fetch('FRONTEND_URL', Rails.application.credentials.dig(Rails.env.to_sym, :frontend_url))
-  config.action_mailer.default_url_options = { host: fronted_url }
+  config.action_mailer.default_url_options = { host: fronted_url } if fronted_url
 
   # Specify outgoing SMTP server. Remember to add smtp/* credentials via rails credentials:edit.
   # config.action_mailer.smtp_settings = {
@@ -92,8 +92,10 @@ Rails.application.configure do
   config.active_record.attributes_for_inspect = [:id]
 
   config.hosts = nil
-  Rails.application.routes.default_url_options = { host: "#{URI.parse(fronted_url).host}" }
-  config.action_controller.asset_host = fronted_url
+  if fronted_url.present?
+    Rails.application.routes.default_url_options = { host: URI.parse(fronted_url).host }
+    config.action_controller.asset_host = fronted_url
+  end
 
   smtp_enabled = ENV.fetch('SMTP_MAIL_ADDRESS', Rails.application.credentials.dig(Rails.env.to_sym, :smtp_mail, :address)).present?
   if smtp_enabled

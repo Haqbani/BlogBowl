@@ -24,6 +24,11 @@ services:
     image: blogbowl/blogbowl:latest
     env_file:
       - .env
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
     restart: unless-stopped
 
   postgres:
@@ -34,7 +39,7 @@ services:
       # Do not forget to generate a new password for production environment
       POSTGRES_PASSWORD: blogbowl
     volumes:
-      - bb_postgres_data:/var/lib/postgresql/data
+      - bb_postgres_data:/var/lib/postgresql
     ports:
       - "5432:5432"
     healthcheck:
