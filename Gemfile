@@ -44,7 +44,7 @@ group :development, :test do
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
 
-  gem "foreman", "~> 0.88.1"
+  gem "foreman", "~> 0.90.0"
 end
 
 group :development do
